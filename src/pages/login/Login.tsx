@@ -5,9 +5,12 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 //import { useNavigate } from 'react-router-dom';
 import SocialLoginButtons from '../../components/SocialLoginButtons/SocialLoginButtons';
 // import Footer from '../../components/Footer/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
+        <Router>
         <div className="relative min-h-screen bg-white">
             {/* Apenas o Header será renderizado */}
             {/* <Header /> */}
@@ -25,7 +28,7 @@ const Login = () => {
 
             {/* Texto "New here? Let’s take you to sign up" */}
             <div className="absolute top-[190px] left-0 right-0 mx-auto w-full sm:w-[520px] text-[#331436] text-[16px] font-normal text-center sm:text-left sm:left-[790px]">
-                New here? Let’s take you to <span className="font-semibold text-[#1E293B]">sign up</span>
+                New here? Let’s take you to <Link to="/signup" className="font-semibold text-[#4F46E5]">sign up</Link>
             </div>
 
             {/* Formulário de login */}
@@ -41,6 +44,7 @@ const Login = () => {
 
             {/* <Footer /> */}
         </div>
+        </Router>
     );
 };
 
