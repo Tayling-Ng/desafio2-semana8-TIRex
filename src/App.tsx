@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import HomeSec2 from './components/HomePage/HomeSec2';
+import MainSection from './components/HomePage/MainSection/MainSection';
 
 function App() {
     const [] = useState(0);
 
     return (
         <div>
-            {/* <div className="bg-red-500">MODELO COMPASSITOS</div> */}
-            <HomeSec2 />
+            <MainSection></MainSection>
         </div>
     );
 }
+
 export default App;
