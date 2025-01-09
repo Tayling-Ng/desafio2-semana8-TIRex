@@ -7,6 +7,7 @@ import { UseEffectPage } from "./useEffect";
 import { UseContextPage } from "./useContext";
 import { CustomHooks } from "./customHooks";
 
+
 export const PageRoute = () => {
   return (
     <Routes>
@@ -17,6 +18,7 @@ export const PageRoute = () => {
       <Route path="/useEffect" element={<UseEffectPage />} />
       <Route path="/useContext" element={<UseContextPage />} />
       <Route path="/customHooks" element={<CustomHooks />} />
+      
     </Routes>
   );
 };
