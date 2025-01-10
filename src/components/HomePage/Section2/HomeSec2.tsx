@@ -4,13 +4,13 @@
 // }
 // export default HomeSec2;
 
-import ManageProjects from '../../assets/img-home-sec2/1_MenageProjects.png';
-import TrackTasks from '../../assets/img-home-sec2/2_TrackTasks.png';
-import Collaborate from '../../assets/img-home-sec2/3_Collaborate.png';
+import ManageProjects from './../../../assets/img-home-sec2/1_MenageProjects.png';
+import TrackTasks from './../../../assets/img-home-sec2/2_TrackTasks.png';
+import Collaborate from './../../../assets/img-home-sec2/3_Collaborate.png';
 
 const HomeSec2 = () => {
     return (
-        <section className="flex flex-col items-center bg-slate-800 text-white w-[1440px] h-[843px] gap-[60px] p-[60px] px-[170px]">
+        <section className="flex flex-col items-center bg-slate-800 text-white w-full h-[843px] gap-[60px] p-[60px] px-[170px]">
             <div className="flex flex-col w-[1100px] h-[192px] gap-6">
                 <h1 className="text-5xl font-bold leading-9 tracking-tight text-left text-yellow-200">
                     The manager
