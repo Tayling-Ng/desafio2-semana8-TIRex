@@ -1,9 +1,14 @@
 import { useState } from 'react';
+import MainSection from './components/HomePage/MainSection/MainSection';
 
 function App() {
     const [] = useState(0);
 
-    return <div className="bg-red-500">MODELO COMPASSITOS</div>;
+    return (
+        <div>
+            <MainSection></MainSection>
+        </div>
+    );
 }
 
 export default App;
