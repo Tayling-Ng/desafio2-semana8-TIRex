@@ -22,7 +22,7 @@ const Header = () => {
         xl:text-[28px]'>Project Manager</p>
       </div>
       {location.pathname === '/' && <Buttom/>}
-      {location.pathname === '/kanban' && <NavBar />}
+      {location.pathname.includes('kanban')  && <NavBar />}
 
     </div>
   );

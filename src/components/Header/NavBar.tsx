@@ -9,23 +9,25 @@ const NavBar = () => {
         setMenuOpen(!menuOpen);
       }
 
-      <div className='xl:hidden'>
-      <button onClick={toggleMenu} className='flex items-center gap-[20px] p-[20px] '>
-        <img src={menuIcon} alt="Menu" className="w-[24px] h-[24px]" />
-        <img src={shapeIcon} alt="Search" className='w-[36px] h-[36px] p-[8px] gap-[4px] bg-[#1E293B] ' />
-      </button>    
-    </div>
+
 
   return (
-    <nav className={`${menuOpen ? 'block' : 'hidden'} sm:flex xl:flex sm:gap-[20px] xl:gap-[20px] sm:items-center xl:items-center`}>
-    <ul className="flex  gap-[20px]">
+    <nav className={` sm:flex xl:flex sm:gap-[20px] xl:gap-[20px] sm:items-center xl:items-center`}>
+    <ul className={`flex  gap-[20px] ${menuOpen ? 'block' : 'hidden'} `}>
       <li><a href="#" className="text-white">Home</a></li>
       <li><a href="#" className="text-white">About</a></li>
       <li><a href="#" className="text-white">Settings</a></li>
       <li><a href="#" className="text-white">Profile</a></li>
     </ul>   
-    <form action="#" className="flex items-center gap-[10px]">
-      <input type="text" placeholder="Search in site" name="search" className="p-[5px] rounded" />
+    <div className=''>
+      <button onClick={toggleMenu} className='flex items-center gap-[20px] p-[20px] '>
+        <img src={menuIcon} alt="Menu" className="w-[24px] h-[24px]" />
+        
+      </button>    
+    </div>
+    <form action="#" className={` items-center gap-[10px] flex p-[5px] rounded  border-[#FFFFFF1A] border text-[#FFFFFF80]`} >
+      <input type="text" placeholder="Search in site" name="search" className={`
+       outline-none ${menuOpen ? 'block' : 'hidden'} bg-transparent `} />
       <button type="submit" className="p-[5px]  rounded">
         <img src={shapeIcon} alt="Search" className="w-[16px] h-[16px]" />
       </button>   
