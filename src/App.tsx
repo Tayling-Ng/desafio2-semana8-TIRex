@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import MainSection from './components/HomePage/MainSection/MainSection';
+import Section3 from './components/HomePage/Section3/Section3';
 
 function App() {
     const [] = useState(0);
 
     return (
         <div>
-            <MainSection></MainSection>
+            <Section3></Section3>
         </div>
     );
 }
