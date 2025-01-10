@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import MainSection from './components/HomePage/MainSection/MainSection';
+// import HomeSec2 from './components/HomePage/Section2/HomeSec2';
+import HomeSec4 from './components/HomePage/Section4/HomeSec4';
 
 function App() {
     const [] = useState(0);
 
     return (
         <div>
-            <MainSection></MainSection>
+            <HomeSec4 />
         </div>
     );
 }
