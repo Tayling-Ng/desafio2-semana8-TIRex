@@ -4,10 +4,10 @@ import shapeIcon from '../../assets/img-header-footer/shape.svg'
 import menuIcon from '../../assets/img-header-footer/menu.svg'
 
 const HeaderKanban = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(!menuOpen)
   }
 
   return (
