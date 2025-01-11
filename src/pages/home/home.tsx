@@ -1,11 +1,11 @@
-import HomeSec2 from '../../components/HomePage/Section2/HomeSec2';
-import HomeSec4 from '../../components/HomePage/Section4/HomeSec4';
+import Section2 from '../../components/HomePage/Section2/Section2';
+// import Section4 from '../../components/HomePage/Section4/Section4';
 
 export const HomePage = () => {
     return (
         <div className="w-full flex flex-col">
-            <HomeSec2 />
-            <HomeSec4 />
+            <Section2 />
+            {/* <Section4 /> */}
         </div>
     );
 };
