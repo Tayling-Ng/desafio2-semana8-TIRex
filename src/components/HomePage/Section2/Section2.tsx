@@ -5,8 +5,8 @@ import img3 from '../../../assets/img-home-sec2/img3-collaborate.png';
 
 function Section2() {
     return (
-        <div className="flex flex-col gap-[50px] px-[20.5px] py-12 min-w-[392px] h-[794px] bg-blue-300 overflow-hidden sm:px-[44px] sm:min-w-[744px] sm:h-[843px]">
-            <div className="flex flex-col gap-6 w-[351px] h-[252px] sm:w-[656px] sm:h-[216px]">
+        <div className="flex flex-col gap-[50px] px-[20.5px] py-12 min-w-[392px] h-[794px] bg-[#1E293B] overflow-hidden sm:px-[44px] sm:min-w-[744px] sm:h-[843px] xl:w-Full xl:h-[843px] xl:px-[170px] xl:py-[85.5px] xl:gap-[60px] z-[15]">
+            <div className="flex flex-col gap-6 w-[351px] h-[252px] sm:w-[656px] sm:h-[216px] xl:w-[1100px] xl:h-[192px]">
                 <h1 className="text-[#FCF4B6] text-[24px] leading-[48px] font-bold sm:text-[40px]">
                     The manager
                 </h1>
