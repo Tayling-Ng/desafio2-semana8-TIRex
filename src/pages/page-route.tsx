@@ -6,6 +6,8 @@ import { UseCallbackPage } from "./useCallback";
 import { UseEffectPage } from "./useEffect";
 import { UseContextPage } from "./useContext";
 import { CustomHooks } from "./customHooks";
+import Settings from "./settings/Settings";
+import Profile from "./profile/profile";
 
 export const PageRoute = () => {
   return (
@@ -17,6 +19,10 @@ export const PageRoute = () => {
       <Route path="/useEffect" element={<UseEffectPage />} />
       <Route path="/useContext" element={<UseContextPage />} />
       <Route path="/customHooks" element={<CustomHooks />} />
+      <Route path="/settings" element={<Settings />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
   );
 };
+
+export default PageRoute;
