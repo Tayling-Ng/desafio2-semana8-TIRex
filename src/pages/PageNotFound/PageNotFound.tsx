@@ -1,9 +1,13 @@
-
+import PageNotFoundComponent from "../../components/PageNotFound/PageNotFoundComponet"
 
 const PageNotFound = () => {
   return (
-    <div>PageNotFound</div>
+    <div>
+      <PageNotFoundComponent />
+    </div>
   )
 }
 
 export default PageNotFound
+
+
