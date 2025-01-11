@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+// import { ClerkProvider } from '@clerk/clerk-react';
+import { PageRoute } from './pages/page-route';
 
 function App() {
-    const [] = useState(0);
-
-    return <div className="bg-red-500">MODELO COMPASSITOS</div>;
+    return (
+      <Router>
+        <PageRoute />
+      </Router>
+    );
 }
 
 export default App;
