@@ -66,8 +66,8 @@ const FileUpload = ({
     <div className="w-full max-w-md md:w-410px pb-4">
       <div className="relative">
         {selectedFile && (
-          <div className="mb-4 flex items-center bg-blue-50 rounded-lg border border-blue-400 p-2">
-            <div>
+          <div className="mb-4 flex bg-blue-50 rounded-lg border border-blue-400 p-2">
+            <div className='flex items-center'>
               <svg 
                 className="w-5 h-5 text-gray-400 mr-2" 
                 fill="none" 
@@ -87,7 +87,7 @@ const FileUpload = ({
             </div>
             <button
               onClick={() => setSelectedFile(null)}
-              className="p-1 hover:bg-blue-200 rounded-lg transition-colors"
+              className="p-1 hover:bg-blue-200 rounded-lg transition-colors ml-auto"
               aria-label="Remove file"
             >
               <Trash2 className="w-4 h-4 text-gray-500" />
