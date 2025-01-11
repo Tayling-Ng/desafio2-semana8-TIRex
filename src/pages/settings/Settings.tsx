@@ -8,7 +8,7 @@ const Settings = () => {
 
   return (
         <div className="font-roboto">
-          {/* Navigation Bar */}
+          {/* header  */}
           <nav className="bg-slate-800 text-white p-4">
             <div className="container mx-auto flex justify-between items-center">
               <h1 className="text-xl font-bold">Project Manager</h1>
@@ -63,7 +63,7 @@ const Settings = () => {
                 <h2 className="text-xl font-medium">Profile picture</h2>
                 <p className="text-sm text-gray-500 leading-9">Update your profile picture. Supported files are JPG, PNG, WebP and JPEG</p>
               </div>  
-                <div className="md:flex md:gap-5 md:justify-center md:items-center md:pt-4">
+                <div className="md:flex md:gap-5 md:justify-start md:items-center md:pt-4">
                 <div className="flex items-center mb-4"> 
                     <div className="w-174.16px h-181px rounded-full bg-white overflow-hidden">
                         <img src="src\assets\react.svg" alt="picture img" className="w-full h-full"></img> 
@@ -146,7 +146,7 @@ const Settings = () => {
               </button>
             </div>
             <div className="flex justify-center pt-4">
-            <p>Never mind, take me <a href="#kanban" className="text-indigo-600 underline">back to my project</a></p>
+            <p>Never mind, take me <a href="#" className="text-indigo-600 underline">back to my project</a></p>
             </div>
           </div>
         
