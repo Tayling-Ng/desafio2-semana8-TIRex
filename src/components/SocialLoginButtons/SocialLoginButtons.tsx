@@ -8,7 +8,7 @@ const SocialLoginButtons = () => {
     };
 
     return (
-        <div className="absolute top-[600px] left-0 right-0 mx-auto sm:left-[750px] sm:w-[520px] w-full sm:h-[56px] h-auto flex flex-col sm:flex-row justify-center gap-4 opacity-100">
+        <div className="absolute top-[500px] left-0 right-0 mx-auto sm:left-[750px] sm:w-[520px] w-full sm:h-[56px] h-auto flex flex-col sm:flex-row justify-center gap-4 opacity-100">
             <button
                 onClick={() => handleSocialLogin('Facebook')}
                 className="w-full sm:w-[110px] h-[56px] text-white p-3 rounded-l-xl rounded-xl border border-gray-300 flex items-center justify-center hover:bg-gray-100"

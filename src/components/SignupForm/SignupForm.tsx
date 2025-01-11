@@ -2,14 +2,14 @@
 import { useState } from 'react';
 
 const SignupForm = () => {
-  // Estados para os campos
+  
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [jobPosition, setJobPosition] = useState('');
   const [password, setPassword] = useState('');
 
-  // Estados para erros
+  
   const [errors, setErrors] = useState({
     firstName: '',
     lastName: '',
@@ -22,7 +22,7 @@ const SignupForm = () => {
     const formErrors = { ...errors };
     let isValid = true;
 
-    // Validação First Name
+    
     if (!firstName || firstName.length < 2 || /\d/.test(firstName)) {
       formErrors.firstName = 'First name must have at least 2 characters and no numbers.';
       isValid = false;
@@ -30,7 +30,7 @@ const SignupForm = () => {
       formErrors.firstName = '';
     }
 
-    // Validação Last Name
+    
     if (!lastName || lastName.length < 2 || /\d/.test(lastName)) {
       formErrors.lastName = 'Last name must have at least 2 characters and no numbers.';
       isValid = false;
@@ -38,7 +38,6 @@ const SignupForm = () => {
       formErrors.lastName = '';
     }
 
-    // Validação Email
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailPattern.test(email)) {
       formErrors.email = 'Please enter a valid email address.';
@@ -47,7 +46,7 @@ const SignupForm = () => {
       formErrors.email = '';
     }
 
-    // Validação Job Position
+    
     if (!jobPosition || jobPosition.length < 5 || /\d/.test(jobPosition)) {
       formErrors.jobPosition = 'Job position must have at least 5 characters and no numbers.';
       isValid = false;
@@ -55,7 +54,7 @@ const SignupForm = () => {
       formErrors.jobPosition = '';
     }
 
-    // Validação Password
+    
     const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{9,}$/;
     if (!password || !passwordPattern.test(password)) {
       formErrors.password = 'Password must be at least 8 characters long, contain at least 1 number, 1 uppercase letter, and 1 special character.';
@@ -78,12 +77,12 @@ const SignupForm = () => {
 
   return (
     <div className="w-full sm:w-[520px] p-5">
-      {/* Sign Up Information Title */}
+      
       <div className="font-roboto text-2xl font-bold text-left mb-6 opacity-100">
         Sign up Information
       </div>
       
-      {/* Already have an account? Log in */}
+      
       <div className="mt-6 opacity-100">
         <div className="w-[520px] h-[24px] text-left">
           Already have an account?{' '}
@@ -96,9 +95,9 @@ const SignupForm = () => {
         </div>
       </div>
 
-      {/* Formulário de Signup */}
+      
       <form onSubmit={handleSubmit}>
-        {/* First Name */}
+        
         <div className="mt-6 flex gap-4 mb-4">
           <div className="w-[251px]">
             <label className="block text-left text-sm font-semibold text-[#331436]">First Name</label>
@@ -112,7 +111,7 @@ const SignupForm = () => {
             {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
           </div>
 
-          {/* Last Name */}
+          
           <div className="w-[251px]">
             <label className="block text-left text-sm font-semibold text-[#331436]">Last Name</label>
             <input
@@ -126,7 +125,7 @@ const SignupForm = () => {
           </div>
         </div>
 
-        {/* Email */}
+      
         <div className="mb-4">
           <label className="block text-left text-sm font-semibold text-[#331436]">Email</label>
           <input
@@ -139,7 +138,7 @@ const SignupForm = () => {
           {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
         </div>
 
-        {/* Job Position */}
+        
         <div className="mb-4">
           <label className="block text-left text-sm font-semibold text-[#331436]">Job position</label>
           <input
@@ -152,7 +151,7 @@ const SignupForm = () => {
           {errors.jobPosition && <p className="text-red-500 text-sm">{errors.jobPosition}</p>}
         </div>
 
-        {/* Password */}
+        
         <div className="mb-6">
           <label className="block text-left text-sm font-semibold text-[#331436]">Password</label>
           <input
@@ -168,8 +167,14 @@ const SignupForm = () => {
         <button type="submit" className="bg-[#1E293B] text-white p-3 rounded-lg w-full hover:bg-[#2d4352]">
           Create an account
         </button>
+
+        <div className="mt-4 text-[#331436] text-[16px] font-normal text-center font-roboto opacity-100">
+        or sign in with...
+      </div>
+    
       </form>
     </div>
+
   );
 };
 

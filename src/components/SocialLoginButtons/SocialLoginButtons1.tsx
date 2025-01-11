@@ -30,7 +30,10 @@ const SocialLoginButtons = () => {
                     className="w-[24px] h-[24px]"
                 />
             </button>
+
+            
         </div>
+      
     );
 };
 

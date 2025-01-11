@@ -6,30 +6,32 @@ import SignupForm from '../../components/SignupForm/SignupForm';
 import SocialLoginButtons from '../../components/SocialLoginButtons/SocialLoginButtons1';
 //import Footer from '../../components/Footer/Footer';
 
+
 const Signup = () => {
     return (
-        <div className="relative min-h-screen bg-white">
-            {/*<Header />*/}
-            
-            <ImageSection />
-            <div className="flex justify-center items-center w-full sm:w-1/2 p-6">
-                
-            <SignupForm /> 
-                
-            </div>
-
-             {/* "or sign in with..." */}
-             <div className="ml-72 text-[#331436] text-[16px] font-normal text-center sm:text-left font-roboto opacity-100">
-                or sign in with...
-            </div>
+        
+        <div className=" min-h-screen ">
            
+                <ImageSection /> 
+               
+               <div className="flex flex-grow">
+               
+                <div className="w-1/2 flex items-center justify-center p-5">
+                <SignupForm /> 
+                </div>
+                </div>
 
-            <SocialLoginButtons />
 
-          
-            {/*<Footer />*/}
+              <SocialLoginButtons />
         </div>
+        
+        
+             
+
+           
+        
     );
 };
+
 
 export default Signup;
