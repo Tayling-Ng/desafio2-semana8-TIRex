@@ -7,7 +7,7 @@
 // import HomeSec2 from './components/HomePage/HomeSec2';
 // import Footer from '../components/Footer';
 
-const Home = () => {
+export const HomePage = () => {
     return (
         <div>
             {/* <Header /> */}
@@ -16,5 +16,3 @@ const Home = () => {
         </div>
     );
 };
-
-export default Home;
