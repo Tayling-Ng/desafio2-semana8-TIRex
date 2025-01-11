@@ -6,7 +6,8 @@ import { UseCallbackPage } from "./useCallback";
 import { UseEffectPage } from "./useEffect";
 import { UseContextPage } from "./useContext";
 import { CustomHooks } from "./customHooks";
-
+import Login from "./login/Login"; // Login
+import Signup from "./signup/Signup"; //Signup
 
 export const PageRoute = () => {
   return (
@@ -18,7 +19,8 @@ export const PageRoute = () => {
       <Route path="/useEffect" element={<UseEffectPage />} />
       <Route path="/useContext" element={<UseContextPage />} />
       <Route path="/customHooks" element={<CustomHooks />} />
-      
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} /> 
     </Routes>
   );
 };

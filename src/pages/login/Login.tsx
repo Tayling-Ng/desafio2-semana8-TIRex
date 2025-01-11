@@ -5,12 +5,12 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 //import { useNavigate } from 'react-router-dom';
 import SocialLoginButtons from '../../components/SocialLoginButtons/SocialLoginButtons';
 // import Footer from '../../components/Footer/Footer';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
-        <Router>
+        
         <div className="relative min-h-screen bg-white">
             {/* Apenas o Header será renderizado */}
             {/* <Header /> */}
@@ -44,7 +44,7 @@ const Login = () => {
 
             {/* <Footer /> */}
         </div>
-        </Router>
+        
     );
 };
 
