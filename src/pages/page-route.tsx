@@ -5,7 +5,7 @@ import Error403 from './Error-403/Error-403';
 
 export const PageRoute = () => {
     return (
-        <Routes>
+        <Routes >
             <Route path="/" element={<HomePage />} index />
             <Route path="/forbidden" element={<Error403 />} />
             {/* pageNotFound tem que ser o último */}
