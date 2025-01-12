@@ -6,7 +6,7 @@ const ImageSection = () => {
         <img
             src={imagem}
             alt="Imagem de Exemplo"
-            className="absolute top-[80px] right-0 w-full sm:w-[626px] sm:h-[720px] h-auto opacity-100"
+            className="w-[626px] h-[720px] opacity-100 object-cover "
         />
     );
 };

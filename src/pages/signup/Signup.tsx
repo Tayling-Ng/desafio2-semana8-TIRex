@@ -10,25 +10,22 @@ import SocialLoginButtons from '../../components/SocialLoginButtons/SocialLoginB
 const Signup = () => {
     return (
         
-        <div className=" min-h-screen ">
+        <div className="flex min-h-screen ">
            
-                <ImageSection /> 
-               
-               <div className="flex flex-grow">
-               
-                <div className="w-1/2 flex items-center justify-center p-5">
+ 
+            <div className="w-full sm:w-1/2 flex items-center justify-center p-0">
                 <SignupForm /> 
-                </div>
-                </div>
+            </div>
 
+            <div className=" w-full sm:w-1/2 flex items-center justify-center  h-full">
+                <ImageSection /> 
+            </div>
 
-              <SocialLoginButtons />
+            
+
+            <SocialLoginButtons />
+            
         </div>
-        
-        
-             
-
-           
         
     );
 };
