@@ -6,11 +6,11 @@ interface ImgCardProps {
 
 function ImgCard({ url, title, subtitle }: ImgCardProps) {
     return (
-        <div className="w-[308px] h-[380px] sm:w-[340px] sm:h-[420px]">
+        <div className="w-[308px] h-[380px] tablet:w-[340px] tablet:h-[420px]">
             <img
                 src={url}
                 alt="square image"
-                className="w-[308px] h-[308px] rounded-[5.5px] sm:w-[340px] sm:h-[340px]"
+                className="w-[308px] h-[308px] rounded-[5.5px] tablet:w-[340px] tablet:h-[340px]"
             />
 
             <div className="p-[11px]">
