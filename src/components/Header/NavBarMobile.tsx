@@ -13,41 +13,41 @@ const NavBarMobile = ({ menuOpen }: NavBarMobileProps) => {
         >
             <form
                 action="#"
-                className="items-center justify-between mt-[10px] px-[10px] w-full gap-[10px] flex p-[5px] rounded  border-[#FFFFFF1A] border text-[#FFFFFF80]"
+                className="items-center justify-between mt-[10px] px-[10px] w-full gap-[10px] flex p-[5px] rounded  border-[#FFFFFF1A] border text-[#FFFFFF80] hover:border-[#268FE4] "
             >
                 <input
                     type="text"
                     placeholder="Search in site"
                     name="search"
-                    className="outline-none bg-transparent"
+                    className="outline-none bg-transparent "
                 />
                 <img src={shapeIcon} alt="Search" className="w-[16px] h-[16px]" />
             </form>
             <div className="flex items-center flex-wrap w-full gap-[20px] justify-center">
                 <a
-                    href="#"
-                    className="text-white font-normal text-[16px] leading-[24px]"
+                    href="/"
+                    className="text-white font-normal text-[16px] leading-[24px] hover:underline"
                 >
                     Home
                 </a>
 
                 <a
                     href="#"
-                    className="text-white font-normal text-[16px] leading-[24px]"
+                    className="text-white font-normal text-[16px] leading-[24px] hover:underline "
                 >
                     About
                 </a>
 
                 <a
-                    href="#"
-                    className="text-white font-normal text-[16px] leading-[24px]"
+                    href="/settings"
+                    className="text-white font-normal text-[16px] leading-[24px] hover:underline "
                 >
                     Settings
                 </a>
 
                 <a
                     href="#"
-                    className="text-white font-normal text-[16px] leading-[24px]"
+                    className="text-white font-normal text-[16px] leading-[24px] hover:underline "
                 >
                     Profile
                 </a>
