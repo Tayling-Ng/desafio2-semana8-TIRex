@@ -1,7 +1,7 @@
 const Section4 = () => {
     return (
-        <section className="flex flex-col justify-center items-center w-[393px] h-[510px] py-[60px] bg-white gap-[60px] sm:w-[744px] sm:h-[549px]">
-            <div className="flex flex-col items-center gap-[24px] sm:w-[404px] sm:h-[96px]">
+        <section className="flex flex-col justify-center items-center w-[393px] h-[510px] py-[60px] bg-white gap-[60px] sm:w-[744px] sm:h-[549px] xl:flex-row xl:justify-center xl:w-[1440px] xl:gap-[60px]">
+            <div className="flex flex-col items-center gap-[24px] sm:w-[404px] sm:h-[96px] xl:text-left xl:w-[520px] xl:items-start">
                 <h1 className="text-[25px] leading-[48px] text-[#160A60] font-bold sm:text-[40px]">
                     Subscribe to Update
                 </h1>
@@ -36,7 +36,7 @@ const Section4 = () => {
                     />
                 </form>
                 <button
-                    className="flex justify-center items-center w-[148px] h-[36px] p-[12px] font-medium text-[15px] leading-[24px] rounded-[8px] bg-[#1E293B] text-white self-center sm:w-[240px] sm:h-[48px] sm:text-[16px]"
+                    className="flex justify-center items-center w-[148px] h-[36px] p-[12px] font-medium text-[15px] leading-[24px] rounded-[8px] bg-[#1E293B] text-white self-center sm:w-[240px] sm:h-[48px] sm:text-[16px] xl:self-start"
                     type="submit"
                 >
                     Subscribe
