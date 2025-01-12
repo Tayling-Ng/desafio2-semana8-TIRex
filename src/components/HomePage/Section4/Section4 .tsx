@@ -81,7 +81,7 @@ function Section4() {
                     {nameError && <div className="absolute text-red-500 text-sm top-[calc(100%-72px)] left-0 desktop:top-[calc(100%-77px)]">{nameError}</div>}
 
                     <button
-                        className="flex justify-center items-center w-[148px] h-[36px] p-[12px] font-medium text-[15px] leading-[24px] rounded-[8px] bg-[#1E293B] text-white self-center tablet:w-[240px] tablet:h-[48px] tablet:text-[16px] desktop:self-start mt-10"
+                        className="flex justify-center items-center w-[148px] h-[36px] p-[12px] font-medium text-[15px] leading-[24px] rounded-[8px] bg-[#1E293B] text-white self-center tablet:w-[240px] tablet:h-[48px] tablet:text-[16px] desktop:self-start mt-10 hover:bg-[#3B5174] hover:text-white"
                         type="submit"
                     >
                         Subscribe

@@ -17,7 +17,7 @@ function Section2() {
                     prioritize, and keep tabs on your projects - whether you’re
                     working solo or a with a team
                 </p>
-                <button className="flex justify-center items-center bg-white text-[#160A60] w-[205px] h-[36px] p-[12px] font-medium text-[15px] leading-[24px] rounded-[8px] self-start tablet:text-[16px]">
+                <button className="flex justify-center items-center bg-white text-[#160A60] w-[205px] h-[36px] p-[12px] font-medium text-[15px] leading-[24px] rounded-[8px] self-start tablet:text-[16px] hover:bg-[#5C5A79] hover:text-white">
                     Learn More
                 </button>
             </div>

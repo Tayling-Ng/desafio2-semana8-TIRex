@@ -12,7 +12,7 @@ function Section3(){
                 <h2 className="text-[#FCF4B6] text-[25px] leading-[48px] font-bold tablet:text-[40px]">Featured Tools</h2>
                 <p className="text-white text-[14px] leading-[24px] font-normal tablet:text-[16px]">Tools to enhance your project management</p>
                 <button className="flex justify-center items-center bg-white text-[#160A60] w-[148px] h-[36px] p-[12px] font-medium text-[15px] leading-[24px] rounded-[8px]
-                tablet:w-[240px] tablet:h-[48px] tablet:text-[16px]">View All</button>
+                tablet:w-[240px] tablet:h-[48px] tablet:text-[16px] hover:bg-[#1E293B] hover:text-white">View All</button>
             </div>
 
             <div className="flex flex-col justify-center items-center gap-[40px] tablet:grid tablet:grid-cols-2 tablet:grid-rows-2 desktop:flex desktop:flex-row desktop:w-full desktop:h-[204px] ">
