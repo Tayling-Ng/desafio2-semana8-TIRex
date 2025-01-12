@@ -23,7 +23,8 @@ const Header = () => {
         {location.pathname === "/" && (
           <a
             href="/login"
-            className="w-[105px] h-[36px] text-[15px] leading-[24px] rounded-[30px] border flex justify-center items-center border-white tablet:text-[16px] tablet:w-[162px] tablet:h-[48px] desktop:w-[254px] desktop:h-[60px]"
+            className="w-[105px] h-[36px] text-[15px] leading-[24px] rounded-[30px] border flex justify-center items-center border-white tablet:text-[16px] tablet:w-[162px] tablet:h-[48px] desktop:w-[254px] desktop:h-[60px] hover:bg-white hover:bg-opacity-80 hover:text-white
+            hover:border-[#268FE4] "
           >
             Login
           </a>
@@ -40,7 +41,7 @@ const Header = () => {
             </button>
             <div
               className={`${menuOpen ? "hidden" : ""
-                } h-[36px] w-[36px] flex items-center justify-center rounded  border-[#FFFFFF1A] border text-[#FFFFFF80]`}
+                } h-[36px] w-[36px] flex items-center justify-center rounded  border-[#FFFFFF1A] border text-[#FFFFFF80]  `}
             >
               <img src={shapeIcon} alt="Search" className="w-[16px] h-[16px]" />
             </div>
