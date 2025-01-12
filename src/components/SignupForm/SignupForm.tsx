@@ -78,13 +78,13 @@ const SignupForm = () => {
   return (
     <div className="w-full sm:w-[520px] p-5">
       
-      <div className="font-roboto text-2xl font-bold text-left mb-6 opacity-100">
+      <div className="font-roboto mb-0 opacity-100 text-[#331436] mx-auto w-full sm:w-[520px] text-[40px] font-bold font-roboto text-center sm:text-left sm:left-[790px]">
         Sign up Information
       </div>
       
       
-      <div className="mt-6 opacity-100">
-        <div className="w-[520px] h-[24px] text-left">
+      <div className="mt-1 opacity-100">
+        <div className="w-[520px] h-[24px] text-left text-[#331436] ">
           Already have an account?{' '}
           <span
             className="font-bold text-[#4F46E5] cursor-pointer"
