@@ -1,4 +1,3 @@
-// import Section4 from '../../components/HomePage/Section4/Section4;
 import Section4 from '../../components/HomePage/Section4/Section4 ';
 
 export const HomePage = () => {
