@@ -9,10 +9,10 @@ import Footer from './components/Footer/Footer'
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <BrowserRouter>
-            <main className="flex flex-col w-full h-screen" >
+            <main className="flex flex-col w-full h-full" >
                 <Header />
-                <div className="flex-1">
-                    <PageRoute />
+                <div className="flex-1 flex flex-col">
+                     <PageRoute /> 
                 </div>
 
                 <Footer />

@@ -11,6 +11,12 @@
 module.exports = {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
+        screens: {
+            mobile:'393px',
+            tablet:'744px',
+            desktop:'1440px'
+
+        },
         extend: {
             fontFamily: {
                 sans: ['Roboto', 'sans-serif'],
