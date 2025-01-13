@@ -12,11 +12,12 @@ const Settings = () => {
           {/* Main Content */}
           <div className="container mx-auto my-8 p-6 rounded-lg">
             {/* Profile section */}
-            <div className="flex items-center gap-2 pb-10">
+            <div className="flex items-center gap-2 pb-10 rounded-full h-119.89px w-115.36px tablet:h-182px tablet:w-174.16px">
               <img
-                src="src\assets\react.svg"
+                src="..\src\assets\img-settings\profile-human.svg"
                 alt="Profile"
-                className="rounded-full h-119.89px w-115.36px tablet:h-182px tablet:w-174.16px"
+                className="rounded-full"  
+              
               />
               <div>
                 <h1 className="text-4xl font-medium tablet:text-5xl">John Doe</h1>
@@ -60,7 +61,7 @@ const Settings = () => {
                 <div className="tablet:flex tablet:gap-5 tablet:justify-start tablet:items-center tablet:pt-4">
                 <div className="flex items-center mb-4"> 
                     <div className="w-174.16px h-181px rounded-full bg-white overflow-hidden">
-                        <img src="src\assets\react.svg" alt="picture img" className="w-full h-full"></img> 
+                        <img src="..\src\assets\img-settings\profile-human.svg" alt="picture img" className="w-full h-full"></img> 
                     </div> 
                 </div> 
                 <form> 
