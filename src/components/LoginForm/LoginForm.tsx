@@ -41,7 +41,7 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="absolute top-[140px] left-0 right-0 mx-auto sm:left-[750px] sm:w-[520px] w-full sm:h-[312px] bg-white rounded-lg p-6 space-y-6 opacity-100">
+        <div className="absolute top-[140px] left-0 right-0 mx-auto tablet:left-[750px] tablet:w-[520px] w-full tablet:h-[312px] bg-white rounded-lg p-6 space-y-6 opacity-100">
             <div className="flex flex-col">
                 <label htmlFor="email" className="text-[#331436] font-semibold">Email</label>
                 <input

@@ -13,11 +13,11 @@ const Signup = () => {
         <div className="flex min-h-screen ">
            
  
-            <div className="w-full sm:w-1/2 flex items-center justify-center p-0">
+            <div className="w-full tablet:w-1/2 flex items-center justify-center p-0">
                 <SignupForm /> 
             </div>
 
-            <div className=" w-full sm:w-1/2 flex items-center justify-center  h-full">
+            <div className=" w-full tablet:w-1/2 flex items-center justify-center  h-full">
                 <ImageSection /> 
             </div>
 

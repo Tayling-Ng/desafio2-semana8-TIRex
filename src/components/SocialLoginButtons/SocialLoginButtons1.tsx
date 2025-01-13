@@ -8,10 +8,10 @@ const SocialLoginButtons = () => {
     };
 
     return (
-        <div className="absolute top-[640px] left-4 sm:left-[80px] mx-auto sm:w-[520px] w-full sm:h-[56px] h-auto flex flex-col sm:flex-row justify-center gap-4 opacity-100  mt-20">
+        <div className="absolute top-[640px] left-4 tablet:left-[80px] mx-auto tablet:w-[520px] w-full tablet:h-[56px] h-auto flex flex-col tablet:flex-row justify-center gap-4 opacity-100  mt-20">
             <button
                 onClick={() => handleSocialLogin('Facebook')}
-                className="w-full sm:w-[110px] h-[56px] text-white p-3 rounded-l-xl rounded-xl border border-gray-300 flex items-center justify-center hover:bg-gray-100"
+                className="w-full tablet:w-[110px] h-[56px] text-white p-3 rounded-l-xl rounded-xl border border-gray-300 flex items-center justify-center hover:bg-gray-100"
             >
                 <img
                     src={facebookIcon}
@@ -22,7 +22,7 @@ const SocialLoginButtons = () => {
 
             <button
                 onClick={() => handleSocialLogin('Google')}
-                className="w-full sm:w-[110px] h-[56px] text-white p-3 rounded-l-xl rounded-xl border border-gray-300 flex items-center justify-center hover:bg-gray-100"
+                className="w-full tablet:w-[110px] h-[56px] text-white p-3 rounded-l-xl rounded-xl border border-gray-300 flex items-center justify-center hover:bg-gray-100"
             >
                 <img
                     src={googleIcon}
