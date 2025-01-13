@@ -1,19 +1,12 @@
 const Profile = () => {
     return (
         <div className="bg-neutral-100 min-h-screen">
-            {/* Header */}
-            <nav className="bg-slate-800 text-white p-4">
-                <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-xl font-bold">Project Manager</h1>
-                </div>
-            </nav>
-  
             {/* Main content */}
             <div className="max-w-[1440px] px-4 py-6">
                 <div className="bg-white rounded-lg p-6 relative">
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 relative">
-                        <div className="hidden lg:block absolute right-0 top-0 w-[1px] h-full bg-gray-300" style={{left: '50%'}}></div>
+                    <div className="grid grid-cols-1 desktop:grid-cols-2 relative">
+                        <div className="hidden desktop:block absolute right-0 top-0 w-[1px] h-full bg-gray-300" style={{left: '50%'}}></div>
 
                         <div>
                             {/* Profile Section */}
@@ -61,9 +54,9 @@ const Profile = () => {
                         </div>
   
                         {/* Right Column */}
-                        <div className="lg:pl-8">
+                        <div className="desktop:pl-8">
                             {/* Latest Activity Section */}
-                            <div className="mt-8 border-t border-gray-300 pb-4 lg:border-0">
+                            <div className="mt-8 border-t border-gray-300 pb-4 desktop:border-0">
                                 <h2 className="text-xl font-medium mb-2">Latest activity</h2>
                                 <p className="text-gray-500 mb-6">John Doe's last interactions</p>
                                 <div className="space-y-4">
@@ -99,13 +92,6 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-  
-            {/* Footer */}
-            <footer className="bg-slate-800 text-white p-4">
-                <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-xl font-bold">Project Manager</h1>
-                </div>
-            </footer>
         </div>
     );
   };
