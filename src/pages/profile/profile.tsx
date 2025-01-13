@@ -1,6 +1,7 @@
 const Profile = () => {
     return (
         <div className="bg-neutral-100 min-h-screen">
+
             {/* Main content */}
             <div className="max-w-[1440px] px-4 py-6">
                 <div className="bg-white rounded-lg p-6 relative">
@@ -92,6 +93,7 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
   };

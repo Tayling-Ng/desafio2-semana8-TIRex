@@ -1,5 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+// export default {
+//     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+//     theme: {
+//         extend: {},
+//     },
+//     plugins: [],
+// };
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         screens: {
@@ -7,6 +16,11 @@ export default {
             tablet:'744px',
             desktop:'1440px'
 
+        },
+        extend: {
+            fontFamily: {
+                sans: ['Roboto', 'sans-serif'],
+            },
         },
         extend: {
             fontFamily: { roboto: ['Roboto', 'sans-serif'] },
