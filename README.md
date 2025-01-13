@@ -133,12 +133,12 @@ Este projeto foi desenvolvido para o desafio 2 - semana 08 da trilha PB Front-en
   
 ## 👥 Membros do Grupo
 
-- **Heberton Geaovane** - [GitHub](https://github.com/HebertonGeovane)
-- **Gabriel Golin** - [GitHub](https://github.com/Gabriel-GGC)
-- **Gabriel Ruiz** - [GitHub](https://github.com/Gruiiz)
-- **Paula Borges** - [GitHub](https://github.com/paulagmborges)
-- **Tayling Martins Ng** - [GitHub](https://github.com/Tayling-Ng)
-- **Thiago Rocha Gomes** - [GitHub](https://github.com/thiago-rgomes)
+- **Heberton Geaovane** - [GitHub](https://github.com/HebertonGeovane) / [Linkedin](https://www.linkedin.com/in/heberton-geovane/)
+- **Gabriel Golin** - [GitHub](https://github.com/Gabriel-GGC) / [Linkedin](https://www.linkedin.com/in/gabriel-golin-crestani/)
+- **Gabriel Ruiz** - [GitHub](https://github.com/Gruiiz) / [Linkedin](https://www.linkedin.com/in/gabriel-ruizz/)
+- **Paula Borges** - [GitHub](https://github.com/paulagmborges) / [Linkedin](https://www.linkedin.com/in/paulagmborges)
+- **Tayling Martins Ng** - [GitHub](https://github.com/Tayling-Ng) / [Linkedin](https://www.linkedin.com/in/taylingng/)
+- **Thiago Rocha Gomes** - [GitHub](https://github.com/thiago-rgomes) / [Linkedin](https://www.linkedin.com/in/thiago-gomes-a76082297/)
  
 
 
