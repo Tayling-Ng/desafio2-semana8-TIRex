@@ -12,7 +12,7 @@ const Profile = () => {
                         <div>
                             {/* Profile Section */}
                             <div className="flex items-center gap-6 mb-8">
-                                <img src="src/assets/react.svg" alt="profile" className="w-32 h-32 rounded-full bg-white" />
+                                <img src="..\src\assets\img-profile\profile-human.svg" alt="profile" className="w-32 h-32 rounded-full bg-white" />
                                 <div>
                                     <h2 className="text-4xl font-semibold">John Doe</h2>
                                     <p className="text-2xl text-gray-500">@johnDoe</p>
@@ -63,7 +63,7 @@ const Profile = () => {
                                 <div className="space-y-4">
                                     {[...Array(7)].map((_, index) => (
                                         <div key={index} className="flex items-center gap-4">
-                                            <img src="src/assets/react.svg" alt="avatar" className="w-12 h-12 rounded-full" />
+                                            <img src="..\src\assets\img-profile\profile-dog.svg" alt="avatar" className="w-12 h-12 rounded-full" />
                                             <p className="text-sm text-gray-500">
                                                 <span className="font-medium text-black">John Doe</span>
                                                 {" marked a task as done on "}
