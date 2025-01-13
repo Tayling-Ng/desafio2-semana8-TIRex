@@ -63,7 +63,7 @@ const FileUpload = ({
   }, [onFileSelected, validateFile]);
 
   return (
-    <div className="w-full max-w-md md:w-410px pb-4">
+    <div className="w-full max-w-md tablet:w-410px pb-4">
       <div className="relative">
         {selectedFile && (
           <div className="mb-4 flex bg-blue-50 rounded-lg border border-blue-400 p-2">
