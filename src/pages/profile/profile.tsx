@@ -1,13 +1,7 @@
 const Profile = () => {
     return (
         <div className="bg-neutral-100 min-h-screen">
-            {/* Header */}
-            <nav className="bg-slate-800 text-white p-4">
-                <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-xl font-bold">Project Manager</h1>
-                </div>
-            </nav>
-  
+
             {/* Main content */}
             <div className="max-w-[1440px] px-4 py-6">
                 <div className="bg-white rounded-lg p-6 relative">
@@ -99,13 +93,7 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-  
-            {/* Footer */}
-            <footer className="bg-slate-800 text-white p-4">
-                <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-xl font-bold">Project Manager</h1>
-                </div>
-            </footer>
+
         </div>
     );
   };
