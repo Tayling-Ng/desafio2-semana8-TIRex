@@ -5,6 +5,8 @@ import Error403 from './Error-403/Error-403';
 import Login from './login/Login';
 import Signup from './signup/Signup';
 import { KanbanPage } from './Kanban';
+import Settings from './settings/Settings';
+import Profile from './profile/profile';
 
 export const PageRoute = () => {
     return (
@@ -14,6 +16,8 @@ export const PageRoute = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/kanban" element={<KanbanPage />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/profile" element={<Profile />} />
             {/* pageNotFound tem que ser o último */}
             <Route path="*" element={<PageNotFound />} />
         </Routes>
