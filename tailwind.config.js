@@ -21,6 +21,11 @@ module.exports = {
             fontFamily: {
                 sans: ['Roboto', 'sans-serif'],
             },
+            
+            colors: {
+                'dark-brown': '#23081C',
+                'span-light-blue': '#92BBFF'
+            },
         },
     },
     plugins: [],
