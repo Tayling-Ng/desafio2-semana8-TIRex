@@ -8,12 +8,6 @@ const Settings = () => {
 
   return (
         <div className="font-roboto">
-          {/* header  */}
-          <nav className="bg-slate-800 text-white p-4">
-            <div className="container mx-auto flex justify-between items-center">
-              <h1 className="text-xl font-bold">Project Manager</h1>
-            </div>
-          </nav>
     
           {/* Main Content */}
           <div className="container mx-auto my-8 p-6 rounded-lg">
@@ -149,14 +143,6 @@ const Settings = () => {
             <p>Never mind, take me <a href="#" className="text-indigo-600 underline">back to my project</a></p>
             </div>
           </div>
-        
-    
-          {/* Footer */}
-          <footer className="bg-slate-800 text-white p-4  mt-8">
-            <div className="container mx-auto text-center">
-              <p>© 2025 Profile Manager. All rights reserved.</p>
-            </div>
-          </footer>
         </div>
     );
 };
