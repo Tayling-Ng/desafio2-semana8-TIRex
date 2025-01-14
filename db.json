@@ -1,5 +1,31 @@
 {
-    "tasks": [],
-    "users": [],
-    "subscribe": []
-  }
+  "tasks": [
+    {
+      "id": "abc123",
+      "priority": "High",
+      "title": "Finalizar apresentação do projeto",
+      "members": [
+        "veronica",
+        "Bob"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "abc123",
+      "createdAt": "2025-01-01T15:00:00Z",
+      "firstName": "Veronica",
+      "lastName": "Doe",
+      "username": "veronica",
+      "email": "veronicadoe@email.com",
+      "password": "dskfçsdfhsdfdghdhlfgdh",
+      "role": "Developer",
+      "socials": {
+        "twitter": "johndoetwitter",
+        "instagram": "johndoeinstagran",
+        "linkedin": "johndoelinkedin"
+      }
+    }
+  ],
+  "subscribe": []
+}
