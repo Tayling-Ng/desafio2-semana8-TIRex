@@ -5,9 +5,12 @@ import pin from '../../../assets/img-kanban/pin.png';
 interface SidebarProps {
   isCollapsed: boolean;
   onToggle: () => void;
+  todoCount: number;
+  inProgressCount: number;
+  doneCount: number;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle, todoCount, inProgressCount, doneCount }) => {
   return (
     <div className={`${isCollapsed ? 'w-[45px] h-[45px] mt-[15px]' : 'w-[298px] h-[538px] mt-[41px] mb-[46px] mr-[25px]'} bg-[#6b7d95] rounded-[30px] mr-[35px] transition-all duration-300`}>
       <div className="flex justify-between items-center p-4">
@@ -49,20 +52,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
               <div className='w-[135px] h-[115px] rounded-l-[15px] rounded-r-[15px] bg-white'>
                 <span className="w-[59px] h-[22px] pl-[9px] text-[#160a60] text-[15px] font-bold font-['Roboto'] leading-snug">Total tasks</span>
                 <div className="flex items-center gap-2 -mb-2">
-                  <span className="text-2xl text-[#4f46e5] font-bold font-['Roboto'] pl-[8px] text-center">10</span>
+                  <span className="text-2xl text-[#4f46e5] font-bold font-['Roboto'] pl-[8px] text-center">{todoCount}</span>
                   <span className="text-[#160a60] text-sm font-bold font-['Roboto'] leading-snug">To do</span>
                 </div>
                 <div className="flex items-center gap-2 -mb-2">
-                  <span className="text-2xl text-[#f59e0b] font-bold font-['Roboto'] pl-[8px]">15</span>
+                  <span className="text-2xl text-[#f59e0b] font-bold font-['Roboto'] pl-[8px]">{inProgressCount}</span>
                   <span className="text-[#160a60] text-sm font-bold font-['Roboto'] leading-snug">In Progress</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl text-[#22c55e] font-bold font-['Roboto'] pl-[8px]">11</span>
+                  <span className="text-2xl text-[#22c55e] font-bold font-['Roboto'] pl-[8px]">{doneCount}</span>
                   <span className="text-[#160a60] text-sm font-bold font-['Roboto'] leading-snug">Done</span>
                 </div>
               </div>
               <div className='w-[135px] h-[76px] rounded-[15px] bg-white flex flex-col justify-center p-2'>
-                <span className="flex-grow flex items-center justify-center text-[#160a60] text-[15px] font-bold font-['Roboto'] leading-snug whitespace-nowrap">Total time estimated</span>
+                <span className="flex-grow flex items-center justify-center text-[#160a60] text-[13px] font-bold font-['Roboto'] leading-snug whitespace-nowrap">Total time estimated</span>
                 <span className="text-[#160a60] text-[32px] flex-grow flex items-center justify-center font-bold">00:00</span>
               </div>
             </div>

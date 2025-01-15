@@ -18,7 +18,6 @@ const Board: React.FC = () => {
   const tasksInProgress = tasks.filter(task => task.status === "In progress");
   const tasksDone = tasks.filter(task => task.status === "Done");
 
- 
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -31,7 +30,13 @@ const Board: React.FC = () => {
         <Column title="Done" onAddTask={handleAddTask} tasks={tasksDone} />
       </div>
       <div className="ml-[65px]">
-        <Sidebar isCollapsed={isSidebarCollapsed} onToggle={() => setSidebarCollapsed(!isSidebarCollapsed)} />
+        <Sidebar 
+          isCollapsed={isSidebarCollapsed} 
+          onToggle={() => setSidebarCollapsed(!isSidebarCollapsed)}
+          todoCount={tasksToDo.length}
+          inProgressCount={tasksInProgress.length}
+          doneCount={tasksDone.length}
+        />
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </div>

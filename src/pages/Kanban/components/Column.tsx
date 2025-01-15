@@ -5,7 +5,7 @@ type ColumnTitle = 'To do' | 'In progress' | 'Done';
 
 interface Task {
   title: string;
-  status: string
+  status: string;
   priority: 'Low' | 'Mid' | 'High';
   progress: number;
   commentsCount: number;
@@ -45,7 +45,7 @@ const Column: React.FC<ColumnProps> = ({ title, onAddTask, tasks }) => {
           +
         </button>
       </div>
-      <div className="p-4 space-y-3 overflow-y-auto h-[calc(100%-45px)]">
+      <div className="p-4 space-y-3 overflow-y-auto overflow-x-hidden h-[calc(100%-45px)]">
         {tasks.map((task, index) => (
           <Card
             key={index}
