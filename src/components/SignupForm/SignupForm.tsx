@@ -1,7 +1,9 @@
 // src/pages/signup/SignupForm.tsx
 import { useState } from 'react';
+import useCreateUser from '../../hooks/useCreateUser';
 
 const SignupForm = () => {
+  const { createTask, isSubmit } = useCreateUser(); 
   
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -67,11 +69,33 @@ const SignupForm = () => {
     return isValid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
       console.log('Form is valid. Submitting...');
       // Aqui você pode adicionar a lógica de envio do formulário (ex: API)
+      const user = {
+        firstName,
+        lastName,
+        email,
+        password,
+        role: 'user', // Defina o valor do role conforme necessário
+        socials: {
+          twitter: '', // Adapte para o caso de você ter campos para redes sociais
+          instagram: '',
+          linkedin: ''
+        },
+        jobPosition, // Adapte conforme os campos do seu form
+      };
+      try {
+        // Chamando o hook 'createTask' com a criação do usuário
+      await createTask(user);
+      console.log('Usuário criado com sucesso!');
+      // Aqui você pode redirecionar ou mostrar uma mensagem de sucesso, se necessário
+      } catch (error) {
+      console.error('Erro ao criar o usuário:', error);
+      // Aqui você pode tratar o erro, como mostrar uma mensagem ao usuário
+      }
     }
   };
 
