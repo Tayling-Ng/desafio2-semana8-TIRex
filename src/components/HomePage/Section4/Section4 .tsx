@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { validateEmail, validateName } from './Validation';
 import ModalSubscription from './ModalSubscription';
+import useSubscribe from './../../../hooks/useSubscribe';
 
 function Section4() {
     const [email, setEmail] = useState('');
@@ -8,6 +9,8 @@ function Section4() {
     const [emailError, setEmailError] = useState('');
     const [nameError, setNameError] = useState('');
     const [showModal, setShowModal] = useState(false);
+
+    const { createSubscribe } = useSubscribe();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -28,11 +31,14 @@ function Section4() {
             setNameError('');
         }
 
-        if (valid) {
-            setShowModal(true);
-            setName('');
-            setEmail('');
+        if (!valid) {
+            return;
         }
+
+        createSubscribe({ name, email });
+        setShowModal(true);
+        setName('');
+        setEmail('');
     };
 
     const handleCloseModal = () => {
@@ -50,7 +56,10 @@ function Section4() {
                 </p>
             </div>
             <div className="flex flex-col w-[353px] h-[256px] gap-10 tablet:w-[404px] tablet:h-[268px]">
-                <form className="flex flex-col relative" onSubmit={handleSubmit}>
+                <form
+                    className="flex flex-col relative"
+                    onSubmit={handleSubmit}
+                >
                     <label htmlFor="email" className="text-[#160A60] font-bold">
                         Email
                     </label>
@@ -61,11 +70,15 @@ function Section4() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email"
-                    />                    
+                    />
                     <div className=" text-black opacity-50 mb-10">
                         We promise not to spam
                     </div>
-                    {emailError && <div className="absolute text-red-500 text-sm top-[calc(100%-178px)] left-0 desktop:top-[calc(100%-185px)]">{emailError}</div>}
+                    {emailError && (
+                        <div className="absolute text-red-500 text-sm top-[calc(100%-178px)] left-0 desktop:top-[calc(100%-185px)]">
+                            {emailError}
+                        </div>
+                    )}
 
                     <label htmlFor="name" className="text-[#160A60] font-bold">
                         Name
@@ -78,7 +91,11 @@ function Section4() {
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter your name"
                     />
-                    {nameError && <div className="absolute text-red-500 text-sm top-[calc(100%-72px)] left-0 desktop:top-[calc(100%-77px)]">{nameError}</div>}
+                    {nameError && (
+                        <div className="absolute text-red-500 text-sm top-[calc(100%-72px)] left-0 desktop:top-[calc(100%-77px)]">
+                            {nameError}
+                        </div>
+                    )}
 
                     <button
                         className="flex justify-center items-center w-[148px] h-[36px] p-[12px] font-medium text-[15px] leading-[24px] rounded-[8px] bg-[#1E293B] text-white self-center tablet:w-[240px] tablet:h-[48px] tablet:text-[16px] desktop:self-start mt-10 hover:bg-[#3B5174] hover:text-white"
@@ -90,10 +107,13 @@ function Section4() {
             </div>
 
             {showModal && (
-                <ModalSubscription message="Your subscription has been completed successfully." onClose={handleCloseModal} />
+                <ModalSubscription
+                    message="Your subscription has been completed successfully."
+                    onClose={handleCloseModal}
+                />
             )}
         </section>
     );
-};
+}
 
 export default Section4;
