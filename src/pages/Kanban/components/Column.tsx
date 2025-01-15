@@ -5,9 +5,10 @@ type ColumnTitle = 'To do' | 'In progress' | 'Done';
 
 interface Task {
   title: string;
+  status: string
   priority: 'Low' | 'Mid' | 'High';
   progress: number;
-  comments: number;
+  commentsCount: number;
   tasksCompleted: number;
   image?: string;
 }
@@ -49,9 +50,10 @@ const Column: React.FC<ColumnProps> = ({ title, onAddTask, tasks }) => {
           <Card
             key={index}
             title={task.title}
+            status={task.status}
             priority={task.priority}
             progress={task.progress}
-            comments={task.comments}
+            commentsCount={task.commentsCount}
             tasksCompleted={task.tasksCompleted}
             image={task.image}
           />

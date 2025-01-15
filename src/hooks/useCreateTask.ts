@@ -5,8 +5,10 @@ import { useState } from "react"
 interface ICreateTask {
     priority: string
     title: string
+    status: string
     members: string[]
     commentsCount: number
+    tasksCompleted: number
     progress: number
     startDate: string
     endDate: string
