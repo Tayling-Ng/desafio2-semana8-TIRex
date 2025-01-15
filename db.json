@@ -1,5 +1,36 @@
 {
-    "tasks": [],
-    "users": [],
-    "subscribe": []
-  }
+  "tasks": [],
+  "users": [
+    {
+      "id": "oh6q82lunm",
+      "createdAt": "2025-01-15T12:28:59.328Z",
+      "firstName": "Heberton Geovane ",
+      "lastName": "Nogueira de Oliveira",
+      "email": "heberton.geovane@gmail.com",
+      "password": "Kikosr@8686",
+      "role": "user",
+      "socials": {
+        "twitter": "",
+        "instagram": "",
+        "linkedin": ""
+      },
+      "jobPosition": "Developer"
+    },
+    {
+      "id": "0b6fcvpkdy9l",
+      "createdAt": "2025-01-15T13:04:44.453Z",
+      "firstName": "Heberton Geovane ",
+      "lastName": "Nogueira de Oliveira ",
+      "email": "heberton.geovane@gmail.com",
+      "password": "Kikosr@868686",
+      "role": "user",
+      "socials": {
+        "twitter": "",
+        "instagram": "",
+        "linkedin": ""
+      },
+      "jobPosition": "Developer"
+    }
+  ],
+  "subscribe": []
+}

@@ -1,10 +1,15 @@
 // src/components/SocialLoginButtons/SocialLoginButtons.tsx
 import facebookIcon from '../../assets/img-login/Socialmedialogo.svg';
 import googleIcon from '../../assets/img-login/Socialmedialogo1.svg';
+import { useClerk } from '@clerk/clerk-react';
 
 const SocialLoginButtons = () => {
+    const {  openSignIn } = useClerk();
     const handleSocialLogin = (platform: string) => {
         console.log(`Login via ${platform}`);
+        openSignIn({
+            socialStrategy: platform.toLowerCase(),
+        });
     };
 
     return (
