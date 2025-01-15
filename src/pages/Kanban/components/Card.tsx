@@ -5,14 +5,15 @@ import taskIcon from '../../../assets/img-kanban/task.png';
 
 interface CardProps {
   title: string;
+  status: string
   priority: 'Low' | 'Mid' | 'High';
   progress: number;
-  comments: number;
+  commentsCount: number;
   tasksCompleted: number;
   image?: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, priority, progress, comments, tasksCompleted, image }) => {
+const Card: React.FC<CardProps> = ({ title, priority, progress, commentsCount, tasksCompleted, image }) => {
   const priorityColors = {
     Low: 'bg-[#eef2ff] text-[#4f46e5]',
     Mid: 'bg-[#fffbeb] text-[#f59e0b]',
@@ -42,7 +43,7 @@ const Card: React.FC<CardProps> = ({ title, priority, progress, comments, tasksC
           <div className="flex items-center gap-4 ml-8 text-gray-500 text-xs">
             <div className="flex items-center gap-">
               <img src={commentIcon} alt="Comments" className="w-4 h-4" />
-              <span>{comments} comments</span>
+              <span>{commentsCount} comments</span>
             </div>
             <div className="flex items-center gap-1">
               <img src={taskIcon} alt="Tasks" className="w-4 h-4 " />

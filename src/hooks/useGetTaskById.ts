@@ -1,54 +1,41 @@
-
-import axios from 'axios';
-import { useCallback, useState } from "react";
-
+import { useState, useEffect } from 'react';
 
 interface ITask {
-    id: string;
-    priority: string;
-    title: string;
-    members: string[];
-    commentsCount: number;
-    progress: number;
-    startDate: string;
-    endDate: string;
-    timeEstimate: string;
-    createdBy: string;
+  id: string;
+  priority: 'Low' | 'Mid' | 'High';
+  title: string;
+  status: string
+  members: string[];
+  commentsCount: number;
+  tasksCompleted: number;
+  progress: number;
+  startDate: string;
+  endDate: string;
+  timeEstimate: string;
+  createdBy: string;
 }
 
+const useGetTasks = () => {
+  const [tasks, setTasks] = useState<ITask[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
-const useGetTaskById = () => {
-   
-    const [loading, setLoading] = useState(false); 
-    const  [ task, setTask] =  useState<ITask | undefined>(undefined)
-
-    
-    const getTaskById = useCallback(async (id:string) => {
-        setLoading(true); 
-
-        const response = await axios.get(`http://localhost:3000/tasks/${id}`)
-        console.log('deu certo', response.data)
-        setTask(response.data)
-        setLoading(false)
-
-    }, []);
-
-    return {
-        getTaskById,
-        task, 
-        loading
-       
-        
+  useEffect(() => {
+    const fetchTasks = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/tasks');
+        const data = await response.json();
+        setTasks(data);
+      } catch (error) {
+        console.error("Error fetching tasks:", error);
+      } finally {
+        setLoading(false);
+      }
     };
+
+    fetchTasks();
+  }, []);
+
+  return { tasks, loading };
 };
 
-export default useGetTaskById
-
-
-
-
-
-
-
-
-
+export default useGetTasks;
