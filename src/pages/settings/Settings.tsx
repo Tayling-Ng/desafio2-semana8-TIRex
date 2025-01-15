@@ -3,12 +3,24 @@ import FileUpload from "./FileUpload";
 import useGetUserById from "../../hooks/useGetUserById";
 import profile from '../../assets/avatar/profile.png'
 import useUpdateUser from "../../hooks/useUpdateUser";
+import { useLoginContext } from "../../context/loginContext";
+import { useNavigate } from "react-router";
 
 
 const Settings = () => {
   function handleFileSelected(): void {
     throw new Error("Function not implemented.");
   }
+
+  const { userLogged, isAuthenticated } = useLoginContext()
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate("/login");
+      return;
+    }
+  }, [isAuthenticated, navigate]);
 
   const [firstName, setFirstName] = useState('Veronica')
   const [lastName, setLastName] = useState('');
@@ -31,7 +43,7 @@ const Settings = () => {
 
   useEffect(() => {
     if (!user) {
-      getUserById('abc123')
+      getUserById(userLogged?.id as string)
     } else {
       setFirstName(user?.firstName)
       setLastName(user?.lastName)
@@ -40,7 +52,7 @@ const Settings = () => {
       setInstagram(user?.socials?.instagram);
       setLinkedin(user?.socials?.linkedin);
     }
-  }, [getUserById, user])
+  }, [getUserById, userLogged, user])
 
 
   const handleUpdateUser = () => {
@@ -206,7 +218,7 @@ const Settings = () => {
                 <span className="sr-only">Success</span>
               </div>
               <p className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Successfully update user</p>
-              <button onClick={() => setShowModal(false)} data-modal-toggle="successModal" type="button" className="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-900">
+              <button onClick={() => setShowModal(false)} data-modal-toggle="successModal" type="button" className="py-2 px-3 text-sm font-medium text-center text-black border border-black rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-900">
                 Ok
               </button>
             </div>

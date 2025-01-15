@@ -1,4 +1,5 @@
 import shapeIcon from "../../assets/img-header-footer/shape.svg";
+import { Link } from "react-router";
 
 interface NavBarMobileProps {
     menuOpen: boolean;
@@ -23,35 +24,37 @@ const NavBarMobile = ({ menuOpen }: NavBarMobileProps) => {
                 />
                 <img src={shapeIcon} alt="Search" className="w-[16px] h-[16px]" />
             </form>
+
             <div className="flex items-center flex-wrap w-full gap-[20px] justify-center">
-                <a
-                    href="/"
-                    className="text-white font-normal text-[16px] leading-[24px] hover:underline"
-                >
-                    Home
-                </a>
+        <Link
+          to="/"
+          className="text-white font-normal text-[16px] leading-[24px] hover:underline"
+        >
+          Home
+        </Link>
+ 
+        <Link
+          to="#"
+          className="text-white font-normal text-[16px] leading-[24px] hover:underline "
+        >
+          About
+        </Link>
+ 
+        <Link
+          to="/settings"
+          className="text-white font-normal text-[16px] leading-[24px] hover:underline "
+        >
+          Settings
+        </Link>
+ 
+        <Link
+          to="/profile"
+          className="text-white font-normal text-[16px] leading-[24px] hover:underline "
+        >
+          Profile
+        </Link>
+      </div>
 
-                <a
-                    href="#"
-                    className="text-white font-normal text-[16px] leading-[24px] hover:underline "
-                >
-                    About
-                </a>
-
-                <a
-                    href="/settings"
-                    className="text-white font-normal text-[16px] leading-[24px] hover:underline "
-                >
-                    Settings
-                </a>
-
-                <a
-                    href="/profile"
-                    className="text-white font-normal text-[16px] leading-[24px] hover:underline "
-                >
-                    Profile
-                </a>
-            </div>
         </nav>
     );
 };

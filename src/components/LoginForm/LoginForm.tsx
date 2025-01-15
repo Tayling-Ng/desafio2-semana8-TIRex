@@ -1,30 +1,40 @@
 // src/components/LoginForm/LoginForm.tsx
 import { useState } from 'react';
-
+import { useLoginContext } from '../../context/loginContext';
+import useGetUserByEmail from '../../hooks/useGetUserByEmail';
+import { useNavigate } from 'react-router-dom';
+ 
+ 
+ 
 const LoginForm = () => {
-    
+ 
+    const navigate = useNavigate();
+   
+    const { login } = useLoginContext()
+    const { getUserByEmail } = useGetUserByEmail()
+   
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState<{ email: string; password: string }>({
         email: '',
         password: '',
     });
-
+ 
     const validateEmail = (email: string) => {
         const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return regex.test(email);
     };
-
+ 
     const validatePassword = (password: string) => {
         const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         return regex.test(password);
     };
-
-
-    const handleLogin = () => {
+ 
+ 
+    const handleLogin = async () => {
         const emailValid = validateEmail(email);
         const passwordValid = validatePassword(password);
-
+ 
         if (!emailValid || !passwordValid) {
             setErrors({
                 email: emailValid ? '' : 'Please enter a valid email address.',
@@ -38,8 +48,17 @@ const LoginForm = () => {
             console.log('Password:', password);
             //  lógica de login,chamar uma API
         }
+ 
+        const user = await getUserByEmail(email)
+        if(!user || user?.password !== password){
+            setErrors({ password: 'email or password invalid', email: '' });
+            return
+        }
+ 
+        login(user)
+        navigate('/kanban')
     };
-
+ 
     return (
         <div className="absolute top-[140px] left-0 right-0 mx-auto tablet:left-[750px] tablet:w-[520px] w-full tablet:h-[312px] bg-white rounded-lg p-6 space-y-6 opacity-100">
             <div className="flex flex-col">
@@ -54,7 +73,7 @@ const LoginForm = () => {
                 />
                 {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
             </div>
-
+ 
             <div className="flex flex-col">
                 <label htmlFor="password" className="text-[#331436] font-semibold">Password</label>
                 <input
@@ -67,7 +86,7 @@ const LoginForm = () => {
                 />
                 {errors.password && <p className="text-red-500 text-xs">{errors.password}</p>}
             </div>
-
+ 
             <div className="flex justify-center">
                 <button
                     onClick={handleLogin}
@@ -80,5 +99,5 @@ const LoginForm = () => {
      
     );
 };
-
+ 
 export default LoginForm;

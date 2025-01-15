@@ -5,21 +5,21 @@ import menuIcon from '../../assets/img-header-footer/menu.svg';
 import shapeIcon from '../../assets/img-header-footer/shape.svg';
 import { useState } from 'react';
 import NavBarTabletDesktop from './NavBarTabletDesktop';
-
+ 
 const Header = () => {
     const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
     console.log(location.pathname);
-
+ 
     return (
         <div className="flex flex-col tablet:flex-row w-full h-fit bg-[#1E293B] text-white px-[20px] py-[15px]">
             <div className="flex w-full justify-between items-center">
-                <div className="flex items-center gap-[20px]">
+                <a className="flex items-center gap-[20px]" href='/'>
                     <img src={logo} alt="Logo" className="w-[50px] h-[50px]" />
                     <p className="text-[16px] leading-[36px] tablet:text-[18px] desktop:text-[28px]">
                         Project Manager
                     </p>
-                </div>
+                </a>
                 {location.pathname === '/' && (
                     <a
                         href="/login"

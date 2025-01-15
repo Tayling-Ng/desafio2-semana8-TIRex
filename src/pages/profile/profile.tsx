@@ -1,10 +1,22 @@
 import { useEffect } from "react";
 import useGetUserById from "../../hooks/useGetUserById";
 import useListTask from "../../hooks/useListTask";
-import profile from '../../assets/avatar/profile.png'
+import profile from "../../assets/avatar/profile.png";
+import { useLoginContext } from "../../context/loginContext";
+import { useNavigate } from "react-router";
 
 const Profile = () => {
 
+    const { userLogged, isAuthenticated } = useLoginContext();
+ 
+    const navigate = useNavigate();
+   
+    useEffect(() => {
+      if (!isAuthenticated) {
+        navigate("/login");
+        return;
+      }
+    }, [isAuthenticated, navigate]);
     const {
         getUserById,
         user,
@@ -21,7 +33,7 @@ const Profile = () => {
 
     useEffect(() => {
         if (!user) {
-            getUserById('abc123')
+            getUserById(userLogged?.id as string)
         }
     }, [user, getUserById])
 

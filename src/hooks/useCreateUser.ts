@@ -18,11 +18,27 @@ interface ICreateUser {
     }
 }
 
+interface IUser {
+    id:string,
+    createdAt:string,
+    firstName: string,
+    lastName: string,
+    username: string,
+    email: string,
+    password: string,
+    role: string,
+    socials: {
+      twitter: string,
+      instagram: string,
+      linkedin: string,
+    }
+}
+
 const useCreateUser = () =>{
 
     const [ isSubmit, setIsSubmit ] = useState(false)
 
-    const createTask = useCallback(async (user: ICreateUser) => {
+    const createUser = useCallback(async (user: ICreateUser) => {
  
         setIsSubmit(true)
  
@@ -31,13 +47,12 @@ const useCreateUser = () =>{
         const createdAt = new Date().toISOString()
         const response = await axios.post('http://localhost:3000/users', { id,createdAt, ...user })
         console.log('deu certo a criação no db.json', response.data)
- 
         setIsSubmit(false)
+        return user as IUser
     }, [])
- 
- 
+  
     return {
-        createTask,
+        createUser,
         isSubmit
     }
 
