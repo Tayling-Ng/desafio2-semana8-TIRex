@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useCreateTask from '../../../hooks/useCreateTask';  // Certifique-se de que o caminho está correto
+import useCreateTask from '../../../hooks/useCreateTask';
 
 interface ModalProps {
   isOpen: boolean;
@@ -40,7 +40,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     return { hours, minutes };
   };
 
-  const { createTask, isSubmit } = useCreateTask(); // Usando o hook
+  const { createTask, isSubmit } = useCreateTask();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -123,9 +123,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     />
                     <div 
                       onClick={() => setTaskData(prev => ({ ...prev, status: 'To do' }))} 
-                      className={`w-6 h-6 relative rounded-lg border ${taskData.status === 'To do' ? 'bg-blue-500' : 'border-black/25'} flex justify-center items-center`}
+                      className={`w-6 h-6 relative rounded-lg border ${taskData.status === 'To do' ? 'bg-[#5570F1]' : 'border-black/25'} flex justify-center items-center`}
                     >
-                      <div className="w-5 h-5 bg-white rounded-md"></div>
+                      
                     </div>
                     <span className="text-[#2a2f31] text-sm font-normal font-['Inter']">To do</span>
                   </label>
@@ -140,9 +140,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     />
                     <div 
                       onClick={() => setTaskData(prev => ({ ...prev, status: 'In progress' }))} 
-                      className={`w-6 h-6 relative rounded-lg border ${taskData.status === 'In progress' ? 'bg-blue-500' : 'border-black/25'} flex justify-center items-center`}
+                      className={`w-6 h-6 relative rounded-lg border ${taskData.status === 'In progress' ? 'bg-[#F59E0B]' : 'border-black/25'} flex justify-center items-center`}
                     >
-                      <div className="w-5 h-5 bg-white rounded-md"></div>
+                      
                     </div>
                     <span className="text-[#2a2f31] text-sm font-normal font-['Inter']">In progress</span>
                   </label>
@@ -157,9 +157,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     />
                     <div 
                       onClick={() => setTaskData(prev => ({ ...prev, status: 'Done' }))} 
-                      className={`w-6 h-6 relative rounded-lg border ${taskData.status === 'Done' ? 'bg-blue-500' : 'border-black/25'} flex justify-center items-center`}
+                      className={`w-6 h-6 relative rounded-lg border ${taskData.status === 'Done' ? 'bg-[#BD2323]' : 'border-black/25'} flex justify-center items-center`}
                     >
-                      <div className="w-5 h-5 bg-white rounded-md"></div>
+                      
                     </div>
                     <span className="text-[#2a2f31] text-sm font-normal font-['Inter']">Done</span>
                   </label>
@@ -268,7 +268,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     onClick={() => setTaskData(prev => ({ ...prev, priority: 'Low' }))}
                     className={`w-6 h-6 relative rounded-lg border ${taskData.priority === 'Low' ? 'bg-[#5570F1]' : 'border-black/25'} flex justify-center items-center`}
                   >
-                    <div className="w-5 h-5 bg-white rounded-md"></div>
+                    
                   </div>
                   <span className="text-[#2a2f31] text-sm font-normal font-['Inter']">Low</span>
                 </label>
@@ -285,7 +285,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     onClick={() => setTaskData(prev => ({ ...prev, priority: 'Mid' }))}
                     className={`w-6 h-6 relative rounded-lg border ${taskData.priority === 'Mid' ? 'bg-[#F59E0B]' : 'border-black/25'} flex justify-center items-center`}
                   >
-                    <div className="w-5 h-5 bg-white rounded-md"></div>
+                    
                   </div>
                   <span className="text-[#2a2f31] text-sm font-normal font-['Inter']">Mid</span>
                 </label>
@@ -300,25 +300,26 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   />
                   <div
                     onClick={() => setTaskData(prev => ({ ...prev, priority: 'High' }))}
-                    className={`w-6 h-6 relative rounded-lg border ${taskData.priority === 'High' ? 'bg-red-500' : 'border-black/25'} flex justify-center items-center`}
+                    className={`w-6 h-6 relative rounded-lg border ${taskData.priority === 'High' ? 'bg-[#BD2323]' : 'border-black/25'} flex justify-center items-center`}
                   >
-                    <div className="w-5 h-5 bg-white rounded-md"></div>
+                    
                   </div>
                   <span className="text-[#2a2f31] text-sm font-normal font-['Inter']">High</span>
                 </label>
               </div>
-            </div>
-          </div>
-
-          {/* Create Button */}
-          <div className="flex justify-end">
+              <div className="flex justify-start">
             <button
               type="submit"
-              className="mt-6 w-[210px] h-[48px] py-2 bg-[#22C55E] text-white rounded-md text-sm font-medium"
+              className="mt-6 w-[410px] h-[48px] py-2 bg-[#22C55E] text-white rounded-md text-sm font-medium self-start"
               disabled={isSubmit}
             >
               {isSubmit ? 'Creating...' : 'Create Task'}
             </button>
+            </div>
+          </div>
+
+          {/* Create Button */}
+          
           </div>
         </form>
       </div>

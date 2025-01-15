@@ -14,12 +14,11 @@ const Board: React.FC = () => {
     setModalOpen(true);
   };
 
-  // Filtra as tarefas para cada status
   const tasksToDo = tasks.filter(task => task.status === "To do");
   const tasksInProgress = tasks.filter(task => task.status === "In progress");
   const tasksDone = tasks.filter(task => task.status === "Done");
 
-  // Exibe uma tela de carregamento enquanto as tarefas estão sendo carregadas
+ 
   if (loading) {
     return <div>Loading...</div>;
   }
