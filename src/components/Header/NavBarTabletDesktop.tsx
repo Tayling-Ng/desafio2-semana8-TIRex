@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const NavBarTabletDesktop = () => {
     return (
         <nav className="gap-[20px] items-center hidden tablet:flex">
-            <div className="flex items-center flex-wrap w-full gap-[20px] justify-center">
+            <div className="flex items-center flex-row w-full gap-[20px] justify-center">
                 <Link
                     to="/"
                     className="text-white font-normal text-[16px] leading-[24px] hover:underline"
