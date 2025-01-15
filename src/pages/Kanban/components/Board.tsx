@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Column from './Column';
 import Sidebar from './Sidebar';
 import Modal from './Modal';
-import useGetTasks from '../../../hooks/useGetTaskById';
+import useListTask from '../../../hooks/useListTask';
 
 const Board: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
 
-  const { tasks, loading } = useGetTasks();
+  const { loading, listTask, getListTasks  } = useListTask();
 
   const handleAddTask = () => {
     setModalOpen(true);
   };
 
-  const tasksToDo = tasks.filter(task => task.status === "To do");
-  const tasksInProgress = tasks.filter(task => task.status === "In progress");
-  const tasksDone = tasks.filter(task => task.status === "Done");
+  const tasksToDo = listTask.filter(task => task.status === "To do");
+  const tasksInProgress = listTask.filter(task => task.status === "In progress");
+  const tasksDone = listTask.filter(task => task.status === "Done");
+
+  useEffect(() => {getListTasks()}, [getListTasks] )
 
  
   if (loading) {

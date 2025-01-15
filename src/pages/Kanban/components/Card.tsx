@@ -4,11 +4,17 @@ import commentIcon from '../../../assets/img-kanban/comment.png';
 import taskIcon from '../../../assets/img-kanban/task.png'; 
 
 interface CardProps {
+  id: string;
+  priority: string;
   title: string;
-  status: string
-  priority: 'Low' | 'Mid' | 'High';
-  progress: number;
+  status: string;
+  members: string[];
   commentsCount: number;
+  progress: number;
+  startDate: string;
+  endDate: string;
+  timeEstimate: string;
+  createdBy: string;
   tasksCompleted: number;
   image?: string;
 }
@@ -23,7 +29,7 @@ const Card: React.FC<CardProps> = ({ title, priority, progress, commentsCount, t
   return (
     <div className="bg-white p-4 rounded-l-[15px] rounded-r-[15px] shadow mb-4 w-[278px] h-[182px]">
       <div className="flex flex-col items-start">
-        <div className={`flex justify-center items-center p-1 rounded-full ${priorityColors[priority]}`}>
+        <div className={`flex justify-center items-center p-1 rounded-full ${priorityColors[priority as keyof typeof priorityColors]}`}>
           <span className="font-semibold text-xs">{priority}</span>
         </div>
         {image && <img src={image} alt={title} className="w-full h-32 object-cover rounded-lg mt-2" />}

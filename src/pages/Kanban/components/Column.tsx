@@ -4,11 +4,17 @@ import Card from './Card';
 type ColumnTitle = 'To do' | 'In progress' | 'Done';
 
 interface Task {
+  id: string;
+  priority: string;
   title: string;
-  status: string
-  priority: 'Low' | 'Mid' | 'High';
-  progress: number;
+  status: string;
+  members: string[];
   commentsCount: number;
+  progress: number;
+  startDate: string;
+  endDate: string;
+  timeEstimate: string;
+  createdBy: string;
   tasksCompleted: number;
   image?: string;
 }
@@ -48,6 +54,12 @@ const Column: React.FC<ColumnProps> = ({ title, onAddTask, tasks }) => {
       <div className="p-4 space-y-3 overflow-y-auto h-[calc(100%-45px)]">
         {tasks.map((task, index) => (
           <Card
+            id={task.id}
+            timeEstimate={task.timeEstimate}
+            createdBy={task.createdBy}
+            members={task.members}
+            startDate={task.startDate}
+            endDate={task.endDate}
             key={index}
             title={task.title}
             status={task.status}

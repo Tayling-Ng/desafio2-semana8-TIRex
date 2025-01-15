@@ -6,6 +6,7 @@ interface ITask {
     id: string;
     priority: string;
     title: string;
+    status: string;
     members: string[];
     commentsCount: number;
     progress: number;
@@ -13,7 +14,10 @@ interface ITask {
     endDate: string;
     timeEstimate: string;
     createdBy: string;
+    tasksCompleted: number;
+    image?: string;
 }
+
 
 
 const useListTask = () => {

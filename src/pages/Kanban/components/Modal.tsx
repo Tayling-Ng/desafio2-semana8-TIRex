@@ -73,12 +73,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     
     try {
       
-      await createTask(newTaskData);
+      await createTask(newTaskData as any);
       alert('Formulário enviado com sucesso!');
       onClose(); 
     } catch (err) {
       console.error('Erro ao criar tarefa:', err);
       alert('Erro ao criar tarefa.');
+
     }
   };
 
