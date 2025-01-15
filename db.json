@@ -14,16 +14,16 @@
     {
       "id": "abc123",
       "createdAt": "2025-01-01T15:00:00Z",
-      "firstName": "Veronica",
-      "lastName": "Doe",
+      "firstName": "lucas",
+      "lastName": "Borges",
       "username": "veronica",
-      "email": "veronicadoe@email.com",
+      "email": "paula@email.com",
       "password": "dskfçsdfhsdfdghdhlfgdh",
       "role": "Developer",
       "socials": {
-        "twitter": "veronicatwitter",
-        "instagram": "veronicainstagram",
-        "linkedin": "veronicalinkedin"
+        "twitter": "paulawitter",
+        "instagram": "paulainstagram",
+        "linkedin": "paulalinkedin"
       }
     }
   ],

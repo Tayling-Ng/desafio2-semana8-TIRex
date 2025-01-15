@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import FileUpload from "./FileUpload";
 import useGetUserById from "../../hooks/useGetUserById";
 import profile from '../../assets/avatar/profile.png'
+import useUpdateUser from "../../hooks/useUpdateUser";
 
 
 const Settings = () => {
@@ -17,26 +18,46 @@ const Settings = () => {
   const [instagram, setInstagram] = useState('Veronica');
   const [linkedin, setLinkedin] = useState('Veronica');
 
+  const [showModal, setShowModal] = useState(false);
 
-  
+
+
+
+
+
 
   const { getUserById, user } = useGetUserById()
+  const { userUpdateById } = useUpdateUser()
 
   useEffect(() => {
     if (!user) {
       getUserById('abc123')
     } else {
       setFirstName(user?.firstName)
-      setLastName(user?.firstName)
-      setEmail(user?.firstName)
+      setLastName(user?.lastName)
+      setEmail(user?.email)
       setTwitter(user?.socials?.twitter)
       setInstagram(user?.socials?.instagram);
-       setLinkedin(user?.socials?.linkedin);
+      setLinkedin(user?.socials?.linkedin);
     }
   }, [getUserById, user])
 
 
-
+  const handleUpdateUser = () => {
+    const userUpdate = {
+      ...user,
+      firstName,
+      lastName,
+      email,
+      socials: {
+        twitter,
+        instagram,
+        linkedin,
+      }
+    }
+    userUpdateById('abc123', userUpdate)
+      setShowModal(true)
+  }
 
   return (
     <div className="font-roboto">
@@ -71,7 +92,7 @@ const Settings = () => {
           <form className="tablet:grid tablet:grid-cols-2  gap-4  desktop:py-6">
             <div className="tablet:col-span-1 mb-4">
               <label className="block text-sm font-semibold mb-2">First Name</label>
-              <input value={firstName} onChange={(e) => setFirstName(e.target.value)}  id="first-name" placeholder="New first name" className="w-full text-sm px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600"></input>
+              <input value={firstName} onChange={(e) => setFirstName(e.target.value)} id="first-name" placeholder="New first name" className="w-full text-sm px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600"></input>
             </div>
             <div className="tablet:col-span-1 mb-4">
               <label className="block text-sm font-semibold mb-2">Last name</label>
@@ -160,14 +181,14 @@ const Settings = () => {
             <label className="block text-xs mb-2">Linkedin</label>
             <div className="flex items-center gap-2 mb-12">
               <label id="linkedin/in/" className="w-full px-3 text-sm py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600">linkedin/in/</label>
-              <input value={linkedin} onChange={(e) => setLinkedin(e.target.value)} type="text"  id="linkedin-@" placeholder="TheJohnDoe" className="w-full px-3 text-sm py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600"></input>
+              <input value={linkedin} onChange={(e) => setLinkedin(e.target.value)} type="text" id="linkedin-@" placeholder="TheJohnDoe" className="w-full px-3 text-sm py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600"></input>
             </div>
           </div>
         </div>
 
         {/* Save Button */}
         <div className="flex">
-          <button className=" text-15px font-semibold mx-auto bg-slate-800 text-white px-24 py-3 rounded-lg tablet:w-410px  hover:bg-slate-600">
+          <button type="button" onClick={handleUpdateUser} className=" text-15px font-semibold mx-auto bg-slate-800 text-white px-24 py-3 rounded-lg tablet:w-410px  hover:bg-slate-600">
             Update information
           </button>
         </div>
@@ -175,6 +196,23 @@ const Settings = () => {
           <p>Never mind, take me <a href="#" className="text-indigo-600 underline">back to my project</a></p>
         </div>
       </div>
+      {showModal && (
+        <div id="successModal"  className=" flex  overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-screen">
+          <div className="relative p-4 w-full max-w-md h-full md:h-auto">
+
+            <div className="relative p-4 text-center bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+              <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 p-2 flex items-center justify-center mx-auto mb-3.5">
+                <svg aria-hidden="true" className="w-8 h-8 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                <span className="sr-only">Success</span>
+              </div>
+              <p className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Successfully update user</p>
+              <button onClick={() => setShowModal(false)} data-modal-toggle="successModal" type="button" className="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-900">
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

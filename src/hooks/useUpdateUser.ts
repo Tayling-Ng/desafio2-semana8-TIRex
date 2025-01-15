@@ -2,16 +2,16 @@ import axios from 'axios'
 import { useState } from 'react'
 
 interface IUser {
-    firstName: string;
-    lastName: string;
-    username: string;
-    email: string;
-    password: string;
-    role: string;
-    socials: {
-        twitter: string;
-        instagram: string;
-        linkedin: string;
+    firstName?: string;
+    lastName?: string;
+    username?: string;
+    email?: string;
+    password?: string;
+    role?: string;
+    socials?: {
+        twitter?: string;
+        instagram?: string;
+        linkedin?: string;
     };
 }
 
