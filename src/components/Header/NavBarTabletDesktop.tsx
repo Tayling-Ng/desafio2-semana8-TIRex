@@ -17,13 +17,13 @@ const NavBarTabletDesktop = () => {
                     About
                 </a>
                 <a
-                    href="#"
+                    href="/settings"
                     className="text-white font-normal text-[16px] leading-[24px] hover:underline"
                 >
                     Settings
                 </a>
                 <a
-                    href="#"
+                    href="/profile"
                     className="text-white font-normal text-[16px] leading-[24px] hover:underline"
                 >
                     Profile
