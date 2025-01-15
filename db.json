@@ -1,21 +1,28 @@
 {
-  "tasks": [],
-  "users": [],
-  "subscribe": [
-    {
-      "id": "7e46",
-      "name": "Tayling",
-      "email": "taymng@yahoo.com.br"
-    },
-    {
-      "id": "bdf8",
-      "name": "",
-      "email": ""
-    },
-    {
-      "id": "a0d4",
-      "name": "Taylingg",
-      "email": "taymng@hotmail.com"
-    }
-  ]
+    "tasks": [
+        {
+            "id": "abc123",
+            "priority": "High",
+            "title": "Finalizar apresentação do projeto",
+            "members": ["veronica", "Bob"]
+        }
+    ],
+    "users": [
+        {
+            "id": "abc123",
+            "createdAt": "2025-01-01T15:00:00Z",
+            "firstName": "lucas",
+            "lastName": "Borges",
+            "username": "veronica",
+            "email": "paula@email.com",
+            "password": "dskfçsdfhsdfdghdhlfgdh",
+            "role": "Developer",
+            "socials": {
+                "twitter": "paulawitter",
+                "instagram": "paulainstagram",
+                "linkedin": "paulalinkedin"
+            }
+        }
+    ],
+    "subscribe": []
 }

@@ -46,7 +46,7 @@ const NavBarMobile = ({ menuOpen }: NavBarMobileProps) => {
                 </a>
 
                 <a
-                    href="#"
+                    href="/profile"
                     className="text-white font-normal text-[16px] leading-[24px] hover:underline "
                 >
                     Profile

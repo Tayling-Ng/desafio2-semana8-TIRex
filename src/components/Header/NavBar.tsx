@@ -14,10 +14,10 @@ const NavBar = () => {
   return (
     <nav className={` sm:flex xl:flex sm:gap-[20px] xl:gap-[20px] sm:items-center xl:items-center`}>
     <ul className={`flex  gap-[20px] ${menuOpen ? 'block' : 'hidden'} `}>
-      <li><a href="#" className="text-white">Home</a></li>
+      <li><a href="/home" className="text-white">Home</a></li>
       <li><a href="#" className="text-white">About</a></li>
-      <li><a href="#" className="text-white">Settings</a></li>
-      <li><a href="#" className="text-white">Profile</a></li>
+      <li><a href="/settings" className="text-white">Settings</a></li>
+      <li><a href="/profile" className="text-white">Profile</a></li>
     </ul>   
     <div className=''>
       <button onClick={toggleMenu} className='flex items-center gap-[20px] p-[20px] '>
