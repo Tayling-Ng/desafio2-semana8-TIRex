@@ -35,7 +35,10 @@ const Board: React.FC = () => {
       <div className="ml-[65px]">
         <Sidebar isCollapsed={isSidebarCollapsed} onToggle={() => setSidebarCollapsed(!isSidebarCollapsed)} />
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+      <Modal isOpen={isModalOpen} onClose={() => {
+        setModalOpen(false)
+        getListTasks()
+        }} />
     </div>
   );
 };
